@@ -1,27 +1,25 @@
-# AngularMaterialForm
+# DevCrev Demo: Angular/Material Reactive Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Description
 
-## Development server
+This is a little demonstration of a reactive angular/material form.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Description](./Description.png?raw=true "Visual Description")
 
-## Code scaffolding
+## General Information and Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+My system:
+- Windows 10 Pro
+- WSL2 (Debian GNU/Linux 10 (buster))
+- node v12.18.3
+- npm v6.14.8
+- Angular v10.0.14 (cli installed globally)
+- Chrome Browser v85.0.4183.83 (Official Build) (64-bit)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To Run:
+1. Navigate into the project directory root
+2. `npm install`
+3. `ng serve`
+4. Point your web browser to http://localhost:4200/
+5. Open the browser developer tools and look at the console when you submit the form
+6. Peruse the source files in ./src/app and subdirectories

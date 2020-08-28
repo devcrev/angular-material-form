@@ -1,0 +1,17 @@
+.form-container {
+    width: 500px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    padding: 16px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.form-action {
+    text-align: center;
+}

@@ -1,1 +1,52 @@
-<button mat-raised-button color="primary" type="button">Write Program</button>
+<div class="form-container">
+    <h1 class="mat-headline">Look at the developer console for form submission.</h1>
+    <form [formGroup]="projectForm" (ngSubmit)="submitForm()" >
+        <mat-form-field appearance="outline">
+            <mat-label>Project Name</mat-label>
+            <input type="text" matInput formControlName="name">
+            <mat-hint *ngIf="name.invalid">Required</mat-hint>
+            <mat-error
+                *ngIf="name.invalid"
+            >
+                {{getNameErrorMessage()}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input type="text" matInput formControlName="email">
+            <mat-hint *ngIf="email.invalid">Required</mat-hint>
+            <mat-error
+                *ngIf="email.invalid"
+            >
+                {{getEmailErrorMessage()}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Project Status</mat-label>
+            <mat-select formControlName="status">
+                <mat-option value="stable">Stable</mat-option>
+                <mat-option value="critical">Critical</mat-option>
+                <mat-option value="finished">Finished</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="form-action">
+            <button
+                type="submit"
+                mat-raised-button
+                color="primary"
+                [disabled]="projectForm.invalid || projectForm.pending"
+            >
+                Submit
+            </button>
+            <p class="mat-body-2" *ngIf="projectForm.valid">
+                Form is ready for submission
+            </p>
+            <p class="mat-body-2" *ngIf="projectForm.pending">
+                Validating information with our server
+            </p>
+            <p class="mat-body-2" *ngIf="projectForm.invalid">
+                Form is not ready for submission
+            </p>
+        </div>
+    </form>
+</div>
